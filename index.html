@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pierre-papier-ciseaux</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  
+<div class="container">
+    <div >
+        <!-- Bouton pour ouvrir le modal -->
+        <button type="button" class="btn btn-primary rule" data-bs-toggle="modal" data-bs-target="#exampleModal"> Règles </button>
+
+        <!-- Fenêtre Modale avec animation de zoom et de glissement -->
+        <div class="modal shadow fade custom-zoom-slide" id="exampleModal" tabindex="-1"
+            aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title" id="exampleModalLabel">Règle du jeu</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                aria-label="Fermer"></button>
+                    </div>
+                    <div class="modal-body">
+                        <h4>Les règles sont simples :</h4>
+
+                        <p> 1. Vous et l'ordinateur choisissez simultanément entre trois options : Pierre, Papier ou
+                            Ciseaux. Cliquez sur l'icône correspondant pour faire votre choix <br>
+                            2. La Pierre bat les Ciseaux, les Ciseaux battent le Papier, et le Papier bat la Pierre.
+                            <br>
+                            3. L'ordinateur fait son choix de manière aléatoire, ce qui signifie que son mouvement est
+                            déterminé par le hasard. <br></p>
+
+                        <div>
+                            <h4> Quelques conseils pour maximiser vos chances de succès :</h4>
+
+                            -<span>Stratégie Aléatoire Équilibrée :</span> Étant donné que l'ordinateur choisit au
+                            hasard, une stratégie aléatoire équilibrée peut vous aider à maintenir une certaine
+                            imprévisibilité.
+
+                            <br>- <span>Adaptation Rapide :</span> Gardez à l'esprit que l'ordinateur n'a pas de schéma
+                            prévisible, alors soyez prêt à vous adapter rapidement à ses choix aléatoires.
+
+                            <br> - <span>Amusez-vous :</span> Le jeu est avant tout une expérience amusante. Profitez-en
+                            et ne sous-estimez pas le plaisir de rivaliser avec la technologie.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        <h1>Pierre-papier-ciseaux</h1>
+        <div id="choixscore-container">
+            <label for="scoreMaxSelect">Choisir le SCORE MAX :</label>
+        <select id="scoreMaxSelect" onchange="changerScoreMax()">
+            <!-- Options de score maximum, par pas de 5 de 5 à 200 -->
+            <script>
+                for (let i = 5; i <= 200; i += 5) {
+                    document.write(`<option value="${i}">${i}</option>`);
+                }
+            </script>
+        </select>
+        </div>
+        <div id="result">Choisissez</div>
+        <div id="scores">
+            <div id="player-score">Joueur: 0</div>
+            <div id="computer-score">Ordinateur: 0</div>
+        </div>
+        <div class="choices" id="choices">
+            <button onclick="playerChoice('pierre')"><i class="fas fa-hand-rock"></i></button>
+            <button onclick="playerChoice('papier')"><i class="fas fa-hand-paper"></i></button>
+            <button onclick="playerChoice('ciseaux')"><i class="fas fa-hand-scissors"></i></button>
+        </div>
+        <button id="nouvellePartie" onclick="nouvellePartie()">Nouvelle Partie</button>
+        <footer>
+            <p>Design with ❤️ by BOSSA Chabel</p>
+        </footer>
+    </div>
+   
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

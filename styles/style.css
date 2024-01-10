@@ -1,0 +1,129 @@
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f3f3f3;
+    max-width: 750px;
+    width: 100%;
+    margin: auto !important;
+    
+}
+
+.container {
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#result {
+    font-size: 24px;
+    margin-top: 20px;
+    color: #2ecc71;
+    font-weight: bold;
+}
+
+#scores {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#player-score, #computer-score {
+    flex: 1;
+    font-size: 18px;
+    margin: 0 10px;
+    padding: 10px;
+    border-radius: 6px;
+    background-color: cornflowerblue;
+    color: #fff;
+}
+
+.choices button {
+    font-size: 24px;
+    margin: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.choices button:hover {
+    background-color: #2980b9;
+}
+
+
+#ordinateur-icon i {
+  color:red;
+  background-color: #e7e7e7;
+}
+button#nouvellePartie{
+    padding: 5px 10px;
+    margin: 15px 10px;
+    background-color: rgb(152, 227, 144) !important;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    color: #038c13;
+    font-weight: bold;
+}
+ #choixscore-container{
+    font-style: italic;
+    font-size: larger;
+    font-weight: 500;
+    color: rgb(147, 147, 147);
+}
+footer{
+    position: relative;
+    bottom: -90px;
+    color: gray;
+}
+ /* modal */
+  /* Ajout de la classe personnalisée pour l'animation */
+  .custom-zoom-slide {
+    animation: zoomAndSlide 0.3s ease-out;
+}
+
+/* Définition de l'animation */
+@keyframes zoomAndSlide {
+    from {
+        opacity: 0;
+        transform: scale(0.8) translateY(-20%);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+span {
+    color: darkblue;
+    line-height: 3px;
+}
+
+.modal-body {
+    background-color: rgb(250, 250, 248);
+    text-align: justify;
+   
+}.modal-body p{
+   border-bottom: 2px solid rgb(205, 205, 205);
+}
+
+.modal-body h4 {
+    color: darkblue;
+    font-size: 13px;
+}
+.container button.rule{
+    background-color: darkorchid !important;
+    float: left;
+
+}
